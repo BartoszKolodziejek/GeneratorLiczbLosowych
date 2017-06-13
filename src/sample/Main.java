@@ -18,11 +18,7 @@ public class Main extends Application {
 
         ListView<String> listView = new ListView<>();
         ScatterChart<Number, Number> chart;
-
-
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-
-
         primaryStage.setTitle("Generator liczb losowych");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();

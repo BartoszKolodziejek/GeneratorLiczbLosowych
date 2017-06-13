@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane fx:id="root" alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane fx:id="root" alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -44,8 +44,8 @@
               </rowConstraints>
                <children>
                   <Label GridPane.rowIndex="2" />
-                  <Label text="parametr 2" GridPane.rowIndex="2" />
-                  <Label text="parametr 1" GridPane.rowIndex="1" />
+                  <Label fx:id="l2" text="parametr 2" GridPane.rowIndex="2" />
+                  <Label fx:id="l1" text="parametr 1" GridPane.rowIndex="1" />
                   <TextField fx:id="parametr1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="parametr2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <Label prefHeight="27.0" prefWidth="258.0" text="Ile liczb chcesz wygenerować?" />
@@ -56,6 +56,7 @@
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="147.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="138.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="138.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -64,15 +65,16 @@
               </rowConstraints>
                <children>
                   <Button mnemonicParsing="false" onAction="#refresh" text="Wyczysc" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#Generuj" text="Generuj" />
                   <Button mnemonicParsing="false" onAction="#save" text="Zapisz" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <MenuButton mnemonicParsing="false" text="Rozklad" GridPane.columnIndex="1">
                     <items>
-                      <MenuItem mnemonicParsing="false" onAction="#Rou" text="Normalny" />
-                      <MenuItem mnemonicParsing="false" onAction="#couchy" text="Couchego" />
-                        <MenuItem mnemonicParsing="false" onAction="#trojkatny" onMenuValidation="#trojkatny" text="Trojkatny" />
-                        <MenuItem mnemonicParsing="false" onAction="#gamma" text="gamma" />
-                        <MenuItem mnemonicParsing="false" onAction="#exp" text="wykladniczy" />
-                        <MenuItem mnemonicParsing="false" onAction="#lognorm" text="Lognorm" />
+                      <MenuItem mnemonicParsing="false" onAction="#r" text="Normalny" />
+                      <MenuItem mnemonicParsing="false" onAction="#c" text="Couchego" />
+                        <MenuItem fx:id="t" mnemonicParsing="false" text="Trojkatny" />
+                        <MenuItem mnemonicParsing="false" onAction="#g" text="gamma" />
+                        <MenuItem mnemonicParsing="false" onAction="#e" text="wykladniczy" />
+                        <MenuItem mnemonicParsing="false" onAction="#l" text="Lognorm" />
                     </items>
                   </MenuButton>
                </children>

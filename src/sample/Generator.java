@@ -123,13 +123,13 @@ public class Generator {
 
             c = random.nextDouble();
             d=random.nextDouble();
-            c=c*2*sqrt(2/E);
+            d=d*2*sqrt(2/E);
             d=d-sqrt(2/E);
             if(c!=0)
                 x = d/c;
         }
         while(c*c > pow(1/E, (x*x)/2));
-        list.add(x);}
+        list.add(x*b + a);}
         return this.list;
     }
     private void couchy(){
